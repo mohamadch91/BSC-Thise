@@ -23,3 +23,12 @@ config
                     "rotation_frequency": 20,
                     "noise_stddev": 0.0
                     
+
+## generate point cloud 
+
+we need to run carla first 
+
+then run pointcloud generator from pcl package from  ros-bridge
+
+
+

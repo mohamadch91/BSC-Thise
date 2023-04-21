@@ -10,7 +10,7 @@
     - [install carla-ros bridge](#install-carla-ros-bridge)
         - [run carla-ros bridge](#run-carla-ros-bridge)
     - [config lidar](#config-lidar)
-  - [generate point cloud](#generate-point-cloud)
+  - [Generate point cloud](#generate-point-cloud)
   - [TODO](#todo)
 
 # NDT & ICP lidar matching methods compare and prediction 
@@ -210,7 +210,7 @@ config file:
 ```             
 
 
-## generate point cloud 
+## Generate point cloud 
 
 we need to run carla first 
 

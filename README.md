@@ -1,5 +1,17 @@
 # BSC thises 
 
+- [BSC thises](#bsc-thises)
+- [NDT \& ICP lidar matching methods compare and prediction](#ndt--icp-lidar-matching-methods-compare-and-prediction)
+  - [Install](#install)
+    - [install carla](#install-carla)
+      - [check python version](#check-python-version)
+      - [install carla](#install-carla-1)
+      - [install ros](#install-ros)
+      - [install carla-ros bridge](#install-carla-ros-bridge)
+        - [run carla-ros bridge](#run-carla-ros-bridge)
+    - [config lidar](#config-lidar)
+  - [generate point cloud](#generate-point-cloud)
+
 # NDT & ICP lidar matching methods compare and prediction 
 
 ## Install
@@ -179,12 +191,13 @@ roslaunch carla_ros_bridge carla_ros_bridge_with_example_ego_vehicle.launch
 
 ### config lidar 
 
-we need to open /carla_ros_bridge/catkin_ws/carla_spawn_objects/config/object.json
+we need to open ~/carla_ros_bridge/catkin_ws/carla_spawn_objects/config/object.json
 
 then find lidar raycast sensor and change config like velodyne 128 
 akse data sheet inja bashe
 
-config 
+config file : 
+```json 
    "spawn_point": {"x": 0.0, "y": 0.0, "z": 2.4, "roll": 0.0, "pitch": 0.0, "yaw": 0.0},
                     "range": 245,
                     "channels": 128,
@@ -193,7 +206,7 @@ config
                     "lower_fov": -20.0,
                     "rotation_frequency": 20,
                     "noise_stddev": 0.0
-                    
+       ```             
 
 ## generate point cloud 
 

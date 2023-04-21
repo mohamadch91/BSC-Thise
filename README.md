@@ -5,9 +5,9 @@
   - [Install](#install)
     - [install carla](#install-carla)
       - [check python version](#check-python-version)
-      - [install carla](#install-carla-1)
-      - [install ros](#install-ros)
-      - [install carla-ros bridge](#install-carla-ros-bridge)
+      - [installation](#installation)
+    - [install ros](#install-ros)
+    - [install carla-ros bridge](#install-carla-ros-bridge)
         - [run carla-ros bridge](#run-carla-ros-bridge)
     - [config lidar](#config-lidar)
   - [generate point cloud](#generate-point-cloud)
@@ -37,7 +37,7 @@ pip3 install --upgrade pip
 ```bash
 pip3 install numpy pygame
 ```
-#### install carla
+#### installation
 
 1. Set up the Debian repository in the system:
 
@@ -85,7 +85,7 @@ sudo add-apt-repository "deb [arch=amd64] http://dist.carla.org/carla $(lsb_rele
 If pygame screen is shown, then everything is ok.
 
 you can see more info in [this link](https://carla.readthedocs.io/en/latest/start_quickstart/)
-#### install ros 
+### install ros 
 
 1. Setup your sources.list
 
@@ -128,7 +128,7 @@ done
 you can see more info in [this link](http://wiki.ros.org/noetic/Installation/Ubuntu)
 
 
-#### install carla-ros bridge 
+### install carla-ros bridge 
 
 we use source Repository for install carla-ros bridge
 
@@ -193,17 +193,16 @@ roslaunch carla_ros_bridge carla_ros_bridge_with_example_ego_vehicle.launch
 
 we need to open ~/carla_ros_bridge/catkin_ws/carla_spawn_objects/config/object.json
 
-then find lidar raycast sensor and change config like velodyne 128 
-akse data sheet inja bashe
-
+then find lidar raycast sensor and change config like velodyne 64e s2 named HDL-64E
+[Data sheet](./images/HDL-64E-Data-Sheet.pdf)
 config file : 
 ```json 
    "spawn_point": {"x": 0.0, "y": 0.0, "z": 2.4, "roll": 0.0, "pitch": 0.0, "yaw": 0.0},
-                    "range": 245,
-                    "channels": 128,
-                    "points_per_second": 2400000,
-                    "upper_fov": 15.0,
-                    "lower_fov": -20.0,
+                    "range": 120,
+                    "channels": 64,
+                    "points_per_second": 1300000,
+                    "upper_fov": 2.0,
+                    "lower_fov": -24.8,
                     "rotation_frequency": 20,
                     "noise_stddev": 0.0
        ```             

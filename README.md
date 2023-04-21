@@ -2,7 +2,7 @@
 
 - [BSC thises](#bsc-thises)
 - [NDT \& ICP lidar matching methods compare and prediction](#ndt--icp-lidar-matching-methods-compare-and-prediction)
-  - [Install](#install)
+  - [Installation Dependencies](#installation-dependencies)
     - [install carla](#install-carla)
       - [check python version](#check-python-version)
       - [installation](#installation)
@@ -11,10 +11,11 @@
         - [run carla-ros bridge](#run-carla-ros-bridge)
     - [config lidar](#config-lidar)
   - [generate point cloud](#generate-point-cloud)
+  - [TODO](#todo)
 
 # NDT & ICP lidar matching methods compare and prediction 
 
-## Install
+## Installation Dependencies
 ### install carla 
 we use carla 0.9.11 version quick install guide is here 
 
@@ -195,7 +196,8 @@ we need to open ~/carla_ros_bridge/catkin_ws/carla_spawn_objects/config/object.j
 
 then find lidar raycast sensor and change config like velodyne 64e s2 named HDL-64E
 [Data sheet](./images/HDL-64E-Data-Sheet.pdf)
-config file : 
+
+config file: 
 ```json 
    "spawn_point": {"x": 0.0, "y": 0.0, "z": 2.4, "roll": 0.0, "pitch": 0.0, "yaw": 0.0},
                     "range": 120,
@@ -205,7 +207,8 @@ config file :
                     "lower_fov": -24.8,
                     "rotation_frequency": 20,
                     "noise_stddev": 0.0
-       ```             
+```             
+
 
 ## generate point cloud 
 
@@ -213,5 +216,14 @@ we need to run carla first
 
 then run pointcloud generator from pcl package from  ros-bridge
 
+
+## TODO
+
+- [ ] Add ground truth data
+- [ ] Generate point cloud from lidar
+- [ ] NDT matching 
+- [ ] ICP matching
+- [ ] Compare NDT and ICP
+- [ ] Prediction
 
 

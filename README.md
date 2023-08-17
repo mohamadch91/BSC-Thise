@@ -10,4 +10,4 @@
 
 # Todo
 
--[] complete first sprint report
+- [] complete first sprint report

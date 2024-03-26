@@ -1,0 +1,8 @@
+geom-gcn: geometric graph convolutional networks 500 epoch
+
+https://paperswithcode.com/sota/3d-point-cloud-classification-on-modelnet40
+
+Let Images Give You More:Point Cloud Cross-Modal Training for Shape Analysis pointcmt
+
+MVCNN Multi-view Convolutional Neural Networks for 3D Shape Recognition in khodesh 90 e ba balayi be 97 reside 
+https://github.com/princeton-vl/SimpleView
